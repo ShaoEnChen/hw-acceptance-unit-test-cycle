@@ -23,7 +23,7 @@ module NavigationHelpers
       movie_path Movie.find_by_title($1)
 
     when /^the Similar Movies page for "(.+)"$/
-      same_director_movies_path Movie.find_by_title($1)
+      same_director_movie_path Movie.find_by_title($1)
 
     else
       begin
