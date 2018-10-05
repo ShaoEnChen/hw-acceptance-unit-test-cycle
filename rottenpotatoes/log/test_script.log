@@ -1,4 +1,39 @@
 Using the default profile...
+Feature: create, update, delete and check movies on Rotten Potatoes
+  As a movie buff
+  So that I can find movies information
+  I want to add new movies, update and delete them, and check them on the website
+
+  Background: movies in database      # features/movie_basic.feature:7
+    Given the following movies exist: # features/step_definitions/movie_steps.rb:1
+      | title        | rating | director     | release_date |
+      | Star Wars    | PG     | George Lucas | 1977-05-25   |
+      | Blade Runner | PG     | Ridley Scott | 1982-06-25   |
+      | Alien        | R      |              | 1979-05-25   |
+      | THX-1138     | R      | George Lucas | 1971-03-11   |
+
+  Scenario: add a new movie                                   # features/movie_basic.feature:16
+    When I go to the create new movie page                    # features/step_definitions/web_steps.rb:48
+    And I fill in "Title" with "The Assassin"                 # features/step_definitions/web_steps.rb:60
+    And I press "Save Changes"                                # features/step_definitions/web_steps.rb:52
+    Then I should be on the home page                         # features/step_definitions/web_steps.rb:230
+    And I should see "The Assassin was successfully created." # features/step_definitions/web_steps.rb:105
+
+  Scenario: update a movie rating                      # features/movie_basic.feature:23
+    Given I am on the details page for "Alien"         # features/step_definitions/web_steps.rb:44
+    When I follow "Edit"                               # features/step_definitions/web_steps.rb:56
+    Then I should be on the edit page for "Alien"      # features/step_definitions/web_steps.rb:230
+    When I select "G" from "Rating"                    # features/step_definitions/web_steps.rb:85
+    And I press "Update Movie Info"                    # features/step_definitions/web_steps.rb:52
+    Then I should be on the details page for "Alien"   # features/step_definitions/web_steps.rb:230
+    And I should see "Alien was successfully updated." # features/step_definitions/web_steps.rb:105
+
+  Scenario: delete a movie                     # features/movie_basic.feature:32
+    Given I am on the details page for "Alien" # features/step_definitions/web_steps.rb:44
+    When I press "Delete"                      # features/step_definitions/web_steps.rb:52
+    Then I should be on the home page          # features/step_definitions/web_steps.rb:230
+    And I should see "Movie 'Alien' deleted."  # features/step_definitions/web_steps.rb:105
+
 Feature: search for movies by director
   As a movie buff
   So that I can find movies with my favorite director
@@ -32,7 +67,7 @@ Feature: search for movies by director
     Then I should be on the home page                                      # features/step_definitions/web_steps.rb:230
     And I should see "'Alien' has no director info"                        # features/step_definitions/web_steps.rb:105
 
-3 scenarios (3 passed)
-17 steps (17 passed)
-0m0.260s
-Coverage report generated for Cucumber Features to /home/ec2-user/environment/hw-acceptance-unit-test-cycle/rottenpotatoes/coverage. 39 / 52 LOC (75.0%) covered.
+6 scenarios (6 passed)
+36 steps (36 passed)
+0m0.349s
+Coverage report generated for Cucumber Features to /home/ec2-user/environment/hw-acceptance-unit-test-cycle/rottenpotatoes/coverage. 46 / 52 LOC (88.46%) covered.
