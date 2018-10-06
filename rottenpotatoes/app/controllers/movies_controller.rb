@@ -69,6 +69,7 @@ class MoviesController < ApplicationController
     else
       @movies = Movie.where(director: @movie.director)
     end
+
   end
 
 end

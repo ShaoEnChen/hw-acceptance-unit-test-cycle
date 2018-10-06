@@ -82,6 +82,7 @@
         null,
         null,
         null,
+        null,
         null
       ],
       "/home/ec2-user/environment/hw-acceptance-unit-test-cycle/rottenpotatoes/app/controllers/application_controller.rb": [
@@ -102,6 +103,112 @@
         null
       ]
     },
-    "timestamp": 1538760992
+    "timestamp": 1538769941
+  },
+  "RSpec": {
+    "coverage": {
+      "/home/ec2-user/environment/hw-acceptance-unit-test-cycle/rottenpotatoes/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/ec2-user/environment/hw-acceptance-unit-test-cycle/rottenpotatoes/app/helpers/movies_helper.rb": [
+        1,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/home/ec2-user/environment/hw-acceptance-unit-test-cycle/rottenpotatoes/app/models/movie.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/ec2-user/environment/hw-acceptance-unit-test-cycle/rottenpotatoes/app/controllers/movies_controller.rb": [
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0
+      ],
+      "/home/ec2-user/environment/hw-acceptance-unit-test-cycle/rottenpotatoes/app/controllers/application_controller.rb": [
+        0,
+        0,
+        0
+      ]
+    },
+    "timestamp": 1538858544
   }
 }
